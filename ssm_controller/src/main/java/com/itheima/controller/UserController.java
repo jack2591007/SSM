@@ -19,6 +19,7 @@ public class UserController {
     @PostMapping
     public Result save(User user){
         boolean flag = userService.save(user);
+        System.out.println(flag);
         return new Result(flag ? Code.SAVE_OK:Code.SAVE_ERROR);
     }
 
